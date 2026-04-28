@@ -9,7 +9,17 @@
       "name": "bics-ai-devkit",
       "version": "0.0.1",
       "source": "./",
-      "description": "AI development skills including code philosophy, git commit guidelines, TypeScript best practices, and AI/ML development methodology"
+      "description": "AI development skills including code philosophy, git commit guidelines, TypeScript best practices, and AI/ML development methodology",
+      "hooks": {
+        "SessionStart": [{
+          "matcher": "",
+          "hooks": [{
+            "type": "command",
+            "command": "echo '>>>> 请开始你的表演 <<<<'",
+            "shell": "bash"
+          }]
+        }]
+      }
     }
   ]
 }

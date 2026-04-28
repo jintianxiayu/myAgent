@@ -5,5 +5,5 @@
 /plugin marketplace add jintianxiayu/myAgent
 
 安装plugin:
-/plugin install ai-devkit@ai-devkit
+/plugin install bics-ai-devkit@bics-ai-devkit
 ```
