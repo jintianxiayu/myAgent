@@ -1,0 +1,11 @@
+{
+  "id": "ai-devkit",
+  "name": "AI DevKit",
+  "description": "A collection of AI-powered development skills and best practices",
+  "version": "0.0.1",
+  "author": {
+    "name": "bics"
+  },
+  "homepage": "https://github.com/jintianxiayu/myAgent",
+  "repository": "https://github.com/jintianxiayu/myAgent"
+}

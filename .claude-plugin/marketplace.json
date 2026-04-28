@@ -1,0 +1,15 @@
+{
+  "name": "ai-devkit",
+  "owner": {
+    "name": "bics"
+  },
+  "description": "A collection of AI-powered development skills and best practices for Claude Code",
+  "plugins": [
+    {
+      "name": "ai-devkit",
+      "version": "0.0.1",
+      "source": "./",
+      "description": "AI development skills including code philosophy, git commit guidelines, TypeScript best practices, and AI/ML development methodology"
+    }
+  ]
+}

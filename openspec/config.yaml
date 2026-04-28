@@ -1,0 +1,33 @@
+schema: spec-driven
+context: |
+  语言：中文（简体）
+  所有产出物必须用简体中文撰写(一些专业术语使用英文，比如 API, REST, GraphQL等)。
+
+rules:
+  proposal:
+    - Include rollback plan
+    - Identify affected teams
+    - 提案必须明确说明变更影响的模块和文件范围。
+    - 如果涉及数据库结构变更，必须列出所有新增/修改的 Entity 字段及迁移策略。
+    - 如果引入了新的第三方 npm 包，必须说明选型理由和替代方案考虑。
+    - 必须评估对现有 API 的兼容性 (是否有 Breaking Change)。
+    - 提案中需包含对性能影响的预估 (如新增查询的索引需求)。
+    - 涉及权限变更，需说明哪些角色会受影响。
+
+  specs:
+    - Use Given/When/Then format
+    - Reference existing patterns before inventing new ones
+
+  design:
+    - 架构设计必须详细到每个模块，包括模块名、功能、依赖关系等，用表格形式列出。
+    - 数据库模型设计必须详细到每个字段，包括字段名、类型、索引、默认值等，用表格形式列出。
+    - API 设计必须详细到每个参数，包括参数名、类型、是否必填、默认值等，用表格形式列出。
+    - 测试用例按模块划分，每个模块的测试用例必须覆盖所有分支，包括成功分支和失败分支。
+
+  tasks:
+    - 任务清单必须遵循从基础设施到业务逻辑的顺序 (如:先创建 Entity 和 Migration，再实现 Repository，最后实现 Service 和 Controller)。
+    - 每个任务应控制在 30分钟 以内的工作量，便于 Code Review。
+    - 任务必须包含对应的测试编写 (单元测试和必要的集成测试)。
+    - 如果功能涉及多个模块，任务应按模块拆分，明确模块间的依赖关系。
+    - 若任务之间有依赖关系，需在任务清单中明确依赖关系。
+    - 若任务会导致接口变更，则需在最后添加 Swagger 文档更新的任务。
