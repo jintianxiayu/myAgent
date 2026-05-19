@@ -28,11 +28,11 @@ description: |
 
 ---
 
-## 一、项目配置（已启用）
+## 一、项目配置
 
 编写代码前必须了解项目已有的 ESLint + Prettier 配置，这些规则**已通过 CI 检查**：
 
-### Prettier（已配置）
+### Prettier
 ```json
 {
   "singleQuote": true,
@@ -42,7 +42,7 @@ description: |
 ```
 > 注意：`semi`（分号）依赖 TypeScript 默认行为，无需手动配置。
 
-### ESLint（已配置关键规则）
+### ESLint
 ```javascript
 {
   "@typescript-eslint/no-explicit-any": "off",  // 项目允许 any
@@ -89,6 +89,11 @@ description: |
 - 嵌套层级不得超过 **4 层**
 - 禁止循环依赖
 
+### 2.7 变量使用
+- 禁止定义未使用的局部变量。如果不确定未来是否会使用，可以暂时注释掉。
+- 如果函数没有在文件内被调用，且不是预期被外部导入使用，请为其添加 `export` 关键字。如果确定无需导出，则删除该函数。
+- 对于回调函数的参数（如 `(req, res, next)` 中的 `next`），如果未使用，请重命名为 `_`。
+- 生成代码后，主动移除所有 `tsc` 报告为 “unused” 的声明。
 ---
 
 ## 三、建议规则（SHOULD）
@@ -138,3 +143,4 @@ description: |
 - [ ] 函数不超过 150 行
 - [ ] 嵌套不超过 4 层
 - [ ] 已通过 `npm run lint` 检查
+- [ ] tsc编译无报错
