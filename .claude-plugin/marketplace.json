@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "bics-ai-devkit",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "source": "./",
       "description": "AI development skills including code philosophy, git commit guidelines, TypeScript best practices, and AI/ML development methodology",
       "hooks": {
